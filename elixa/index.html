@@ -39,7 +39,7 @@ th { background: #f7f7f9; font-weight: 600; }
 </head>
 <body>
 <h1>Política de Privacidade — Elixa</h1>
-<p><strong>Última atualização:</strong> 23 de agosto de 2026</p>
+<p><strong>Última atualização:</strong> 1 de setembro de 2026</p>
 <p><strong>Publicada em:</strong> <a href="https://danielrortega.github.io/elixa/">https://danielrortega.github.io/elixa/</a></p>
 <p>Esta política descreve o que o aplicativo <strong>Elixa: Potion Sort Puzzle</strong> (<code>com.danielrortega.elixa</code>) coleta, por quê, e com quem compartilha.</p>
 <p>O conteúdo abaixo foi escrito a partir das permissões que o aplicativo realmente declara e dos eventos que ele realmente envia — não de um modelo genérico.</p>
@@ -61,7 +61,7 @@ th { background: #f7f7f9; font-weight: 600; }
 <li><strong>Origem da instalação</strong> — de qual campanha ou loja a instalação veio</li>
 </ul>
 <h3>2.2 Dados sobre como você joga</h3>
-<p>O aplicativo envia três eventos próprios, e <strong>todos os seus dados são números</strong>:</p>
+<p>O aplicativo envia quatro eventos próprios, e <strong>todos os seus dados são números</strong>:</p>
 <table><thead><tr><th>Informação</th><th>Exemplo</th></tr></thead><tbody>
 <tr><td>Número do nível</td><td>6</td></tr>
 <tr><td>Quantidade de cores no nível</td><td>4</td></tr>
@@ -70,9 +70,10 @@ th { background: #f7f7f9; font-weight: 600; }
 <tr><td>Duração do nível, em segundos</td><td>92</td></tr>
 <tr><td>Quantas vezes você reiniciou</td><td>1</td></tr>
 </tbody></table>
+<p>Três desses eventos são disparados quando um nível começa, termina ou é reiniciado. <strong>O quarto é disparado quando um anúncio entre níveis aparece</strong>, e leva apenas o número do nível — ele existe para conferirmos que o anúncio foi de fato exibido. Esse evento vai para o Firebase Analytics, <strong>não para o AdMob</strong>.</p>
 <p>Esses números existem para ajustar a dificuldade do jogo. <strong>Nenhum deles contém texto, nome, mensagem ou qualquer conteúdo escrito por você</strong> — o jogo não tem campo de texto.</p>
 <h3>2.3 Dados guardados apenas no seu aparelho</h3>
-<p>O número do nível em que você parou é gravado <strong>no próprio aparelho</strong> e nunca é enviado para lugar nenhum. Ele é apagado quando você desinstala o aplicativo ou limpa os dados do app.</p>
+<p>O nível em que você parou e a sua pontuação acumulada são gravados <strong>no próprio aparelho</strong> e nunca são enviados para lugar nenhum. Os dois são apagados quando você desinstala o aplicativo ou limpa os dados do app.</p>
 <hr>
 <h3>2.4 Dados usados para exibir anúncios, pelo Google AdMob</h3>
 <p>O jogo exibe anúncios entre níveis, fornecidos pelo <strong>Google AdMob</strong>. Para isso, o AdMob pode acessar:</p>
@@ -121,7 +122,7 @@ th { background: #f7f7f9; font-weight: 600; }
 <hr>
 <hr>
 <h1>Privacy Policy — Elixa</h1>
-<p><strong>Last updated:</strong> August 23, 2026</p>
+<p><strong>Last updated:</strong> September 1, 2026</p>
 <p>This policy describes what the <strong>Elixa: Potion Sort Puzzle</strong> app (<code>com.danielrortega.elixa</code>) collects, why, and who it is shared with.</p>
 <h2>1. Who we are</h2>
 <p>Elixa is developed by <strong>Daniel Ortega</strong>, an independent developer.</p>
@@ -138,10 +139,11 @@ th { background: #f7f7f9; font-weight: 600; }
 <li><strong>Install referrer</strong> — which campaign or store the install came from</li>
 </ul>
 <h3>2.2 Gameplay data</h3>
-<p>The app sends three custom events. <strong>Every value is a number</strong>: level number, number of colors in the level, minimum possible moves, moves you used, level duration in seconds, and how many times you restarted.</p>
+<p>The app sends four custom events. <strong>Every value is a number</strong>: level number, number of colors in the level, minimum possible moves, moves you used, level duration in seconds, and how many times you restarted.</p>
+<p>Three of those events fire when a level starts, ends or is restarted. <strong>The fourth fires when an ad appears between levels</strong>, and carries only the level number — it exists so we can confirm the ad was actually shown. That event goes to Firebase Analytics, <strong>not to AdMob</strong>.</p>
 <p>These numbers exist to tune game difficulty. <strong>None of them contains text, names, messages, or anything you wrote</strong> — the game has no text input.</p>
 <h3>2.3 Data stored only on your device</h3>
-<p>The level you stopped at is saved <strong>on the device</strong> and never transmitted. It is erased when you uninstall the app or clear its data.</p>
+<p>The level you stopped at and your accumulated score are saved <strong>on the device</strong> and never transmitted. Both are erased when you uninstall the app or clear its data.</p>
 <h3>2.4 Data used to serve ads, via Google AdMob</h3>
 <p>The game shows ads between levels, served by <strong>Google AdMob</strong>. For that purpose, AdMob may access:</p>
 <ul>
