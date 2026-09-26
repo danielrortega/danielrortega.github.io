@@ -39,7 +39,7 @@ th { background: #f7f7f9; font-weight: 600; }
 </head>
 <body>
 <h1>Política de Privacidade — Elixa</h1>
-<p><strong>Última atualização:</strong> 1 de setembro de 2026</p>
+<p><strong>Última atualização:</strong> 25 de setembro de 2026</p>
 <p><strong>Publicada em:</strong> <a href="https://danielrortega.github.io/elixa/">https://danielrortega.github.io/elixa/</a></p>
 <p>Esta política descreve o que o aplicativo <strong>Elixa: Potion Sort Puzzle</strong> (<code>com.danielrortega.elixa</code>) coleta, por quê, e com quem compartilha.</p>
 <p>O conteúdo abaixo foi escrito a partir das permissões que o aplicativo realmente declara e dos eventos que ele realmente envia — não de um modelo genérico.</p>
@@ -73,7 +73,8 @@ th { background: #f7f7f9; font-weight: 600; }
 <p>Três desses eventos são disparados quando um nível começa, termina ou é reiniciado. <strong>O quarto é disparado quando um anúncio entre níveis aparece</strong>, e leva apenas o número do nível — ele existe para conferirmos que o anúncio foi de fato exibido. Esse evento vai para o Firebase Analytics, <strong>não para o AdMob</strong>.</p>
 <p>Esses números existem para ajustar a dificuldade do jogo. <strong>Nenhum deles contém texto, nome, mensagem ou qualquer conteúdo escrito por você</strong> — o jogo não tem campo de texto.</p>
 <h3>2.3 Dados guardados apenas no seu aparelho</h3>
-<p>O nível em que você parou e a sua pontuação acumulada são gravados <strong>no próprio aparelho</strong> e nunca são enviados para lugar nenhum. Os dois são apagados quando você desinstala o aplicativo ou limpa os dados do app.</p>
+<p>O nível em que você parou é gravado <strong>no próprio aparelho</strong> e nunca é enviado para lugar nenhum. Ele é apagado quando você desinstala o aplicativo ou limpa os dados do app.</p>
+<p>A sua <strong>pontuação acumulada</strong> também é gravada no aparelho — e, a partir da versão 0.4, ela <strong>também é enviada ao placar do Google Play Games</strong>, se você estiver conectado. Como isso funciona está descrito em 2.5.</p>
 <hr>
 <h3>2.4 Dados usados para exibir anúncios, pelo Google AdMob</h3>
 <p>O jogo exibe anúncios entre níveis, fornecidos pelo <strong>Google AdMob</strong>. Para isso, o AdMob pode acessar:</p>
@@ -85,6 +86,17 @@ th { background: #f7f7f9; font-weight: 600; }
 <p>O AdMob <strong>não</strong> recebe seu progresso no jogo, e o Elixa não envia ao AdMob nenhum dado das seções 2.2 e 2.3.</p>
 <p>Você pode desativar a personalização de anúncios no próprio aparelho, em Configurações do Android → Google → Anúncios, ou redefinir o Advertising ID como descrito na seção 6. Anúncios continuarão aparecendo, porém menos relevantes.</p>
 <hr>
+<h3>2.5 Placar de pontuação, pelo Google Play Games</h3>
+<p>A partir da versão 0.4, o jogo mostra a sua posição num placar de pontuação operado pelo <strong>Google Play Games</strong>. Para isso:</p>
+<ul>
+<li><strong>O jogo entra na sua conta do Play Games</strong> quando é aberto. Você pode recusar, e <strong>o jogo funciona normalmente sem isso</strong> — apenas a linha com a sua posição não aparece.</li>
+<li><strong>A sua pontuação acumulada é enviada</strong> ao placar sempre que ela aumenta.</li>
+<li><strong>O jogo consulta a sua própria posição</strong> para exibi-la. Ele não busca, não recebe e não mostra o nome, a foto ou a pontuação de nenhum outro jogador.</li>
+</ul>
+<p><strong>O que o Google coleta nesse processo</strong>, conforme a documentação dele: a sua identidade de jogador (apelido e avatar do Play Games), dados de uso e de diagnóstico do próprio serviço, e a pontuação que o jogo envia.</p>
+<p><strong>Quem pode ver a sua pontuação</strong> depende de você. O perfil do Play Games tem uma configuração de visibilidade com três opções — <strong>&quot;Somente você&quot;</strong>, <strong>&quot;Amigos&quot;</strong> ou <strong>&quot;Todos&quot;</strong> —, e ela é alterada no aplicativo Play Games. Se você escolher &quot;Todos&quot;, a sua pontuação e o seu apelido aparecem no placar público do jogo. Se escolher &quot;Somente você&quot; ou &quot;Amigos&quot;, você não entra no placar público, e o Elixa deixa de exibir a sua posição.</p>
+<p><strong>Nós não recebemos nada disso.</strong> O placar é do Google: o jogo pergunta a ele qual é a sua posição e mostra o número. Não há servidor nosso envolvido, e não guardamos cópia de nada.</p>
+<hr>
 <h2>3. O que NÃO é coletado</h2>
 <p>O aplicativo <strong>não</strong> coleta, e não tem permissão técnica para coletar:</p>
 <ul>
@@ -92,11 +104,12 @@ th { background: #f7f7f9; font-weight: 600; }
 <li><strong>Localização</strong> — o aplicativo não solicita permissão de localização</li>
 <li>Contatos, fotos, arquivos, câmera ou microfone</li>
 <li>Dados de pagamento — o aplicativo não tem compras</li>
-<li>Conta ou login — não é necessário criar conta para jogar</li>
+<li><strong>Conta própria</strong> — não criamos nem mantemos cadastro nenhum. O jogo usa a sua conta do Google Play Games, que já é sua, e apenas para o placar da seção 2.5. <strong>Recusar é possível e o jogo continua jogável.</strong></li>
 </ul>
 <hr>
 <h2>4. Com quem os dados são compartilhados</h2>
-<p>Os dados descritos na seção 2 são processados pelo <strong>Google LLC</strong>, por meio do Firebase Analytics e do Google AdMob, na condição de operador dos dados.</p>
+<p>Os dados descritos na seção 2 são processados pelo <strong>Google LLC</strong>, por meio do Firebase Analytics, do Google AdMob e do <strong>Google Play Games</strong>.</p>
+<p>Há uma diferença entre eles que vale dizer com clareza: no Firebase e no AdMob o Google trata os dados como operador, a nosso pedido. <strong>No Play Games, a pontuação e o apelido ficam num serviço do próprio Google</strong>, e — se a sua visibilidade estiver como &quot;Todos&quot; — podem ser vistos por outros jogadores no placar público.</p>
 <ul>
 <li>Política de privacidade do Google: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
 <li>Como o Google usa dados de aplicativos parceiros: <a href="https://policies.google.com/technologies/partner-sites">https://policies.google.com/technologies/partner-sites</a></li>
@@ -111,6 +124,8 @@ th { background: #f7f7f9; font-weight: 600; }
 <ul>
 <li><strong>Redefinir ou excluir o Advertising ID</strong> — Configurações do Android → Google → Anúncios. Excluí-lo impede que novos dados sejam associados ao seu aparelho.</li>
 <li><strong>Apagar todos os dados locais</strong> — desinstale o aplicativo, ou use Configurações → Aplicativos → Elixa → Armazenamento → Limpar dados.</li>
+<li><strong>Apagar a sua pontuação e os dados do Play Games</strong> — no seu perfil do Play Games (https://play.google.com/games/profile) ou na sua Conta Google (https://myaccount.google.com). Isso apaga os dados que o Google coletou pelo Play Games, inclusive a pontuação enviada por este jogo.</li>
+<li><strong>Escolher quem vê a sua pontuação</strong> — a visibilidade do perfil do Play Games (&quot;Somente você&quot;, &quot;Amigos&quot; ou &quot;Todos&quot;) é alterada no aplicativo Play Games, e vale para o placar descrito em 2.5.</li>
 </ul>
 <p>Pela <strong>LGPD</strong> (Lei 13.709/2018, Brasil) e pelo <strong>GDPR</strong> (União Europeia), você tem direito de acesso, correção, exclusão e portabilidade dos seus dados, além do direito de se opor ao tratamento. Para exercer qualquer um deles, escreva para o e-mail de contato da seção 1. Responderemos em até 15 dias.</p>
 <hr>
@@ -122,7 +137,7 @@ th { background: #f7f7f9; font-weight: 600; }
 <hr>
 <hr>
 <h1>Privacy Policy — Elixa</h1>
-<p><strong>Last updated:</strong> September 1, 2026</p>
+<p><strong>Last updated:</strong> September 25, 2026</p>
 <p>This policy describes what the <strong>Elixa: Potion Sort Puzzle</strong> app (<code>com.danielrortega.elixa</code>) collects, why, and who it is shared with.</p>
 <h2>1. Who we are</h2>
 <p>Elixa is developed by <strong>Daniel Ortega</strong>, an independent developer.</p>
@@ -143,7 +158,8 @@ th { background: #f7f7f9; font-weight: 600; }
 <p>Three of those events fire when a level starts, ends or is restarted. <strong>The fourth fires when an ad appears between levels</strong>, and carries only the level number — it exists so we can confirm the ad was actually shown. That event goes to Firebase Analytics, <strong>not to AdMob</strong>.</p>
 <p>These numbers exist to tune game difficulty. <strong>None of them contains text, names, messages, or anything you wrote</strong> — the game has no text input.</p>
 <h3>2.3 Data stored only on your device</h3>
-<p>The level you stopped at and your accumulated score are saved <strong>on the device</strong> and never transmitted. Both are erased when you uninstall the app or clear its data.</p>
+<p>The level you stopped at is saved <strong>on the device</strong> and never transmitted. It is erased when you uninstall the app or clear its data.</p>
+<p>Your <strong>accumulated score</strong> is also saved on the device and, from version 0.4 onwards, is <strong>also sent to the Google Play Games leaderboard</strong> if you are signed in. Section 2.5 describes how.</p>
 <h3>2.4 Data used to serve ads, via Google AdMob</h3>
 <p>The game shows ads between levels, served by <strong>Google AdMob</strong>. For that purpose, AdMob may access:</p>
 <ul>
@@ -153,15 +169,27 @@ th { background: #f7f7f9; font-weight: 600; }
 </ul>
 <p>AdMob does <strong>not</strong> receive your game progress, and Elixa sends AdMob no data from sections 2.2 and 2.3.</p>
 <p>You can turn off ad personalisation on the device itself, under Android Settings → Google → Ads, or reset your Advertising ID as described in section 6. Ads will still appear, but will be less relevant.</p>
+<h3>2.5 Score leaderboard, via Google Play Games</h3>
+<p>From version 0.4 onwards, the game shows your position on a score leaderboard operated by <strong>Google Play Games</strong>. For that purpose:</p>
+<ul>
+<li><strong>The game signs in to your Play Games account</strong> when it opens. You may decline, and <strong>the game works normally without it</strong> — only the line showing your position is hidden.</li>
+<li><strong>Your accumulated score is sent</strong> to the leaderboard whenever it increases.</li>
+<li><strong>The game reads your own position</strong> in order to display it. It does not fetch, receive or show any other player&#x27;s name, picture or score.</li>
+</ul>
+<p><strong>What Google collects in the process</strong>, per its own documentation: your gamer identity (Play Games nickname and avatar), usage and diagnostics data for the service itself, and the score the game submits.</p>
+<p><strong>Who can see your score is up to you.</strong> The Play Games profile has a visibility setting with three options — <strong>&quot;Only you&quot;</strong>, <strong>&quot;Friends&quot;</strong> or <strong>&quot;Everyone&quot;</strong> — changed in the Play Games app. Choosing &quot;Everyone&quot; puts your score and nickname on the game&#x27;s public leaderboard. Choosing &quot;Only you&quot; or &quot;Friends&quot; keeps you out of it, and Elixa then stops showing your position.</p>
+<p><strong>We receive none of this.</strong> The leaderboard is Google&#x27;s: the game asks it for your position and displays the number. No server of ours is involved, and we keep no copy.</p>
 <h2>3. What is NOT collected</h2>
-<p>The app does not collect, and has no technical permission to collect: name, e-mail, phone, address or any personal identifier; <strong>location</strong> (the app requests no location permission); contacts, photos, files, camera or microphone; payment data (the app has no purchases); account or login (none is required to play).</p>
+<p>The app does not collect, and has no technical permission to collect: name, e-mail, phone, address or any personal identifier; <strong>location</strong> (the app requests no location permission); contacts, photos, files, camera or microphone; payment data (the app has no purchases); <strong>an account of our own</strong> (we create and keep no registration — the game uses your existing Google Play Games account, and only for the leaderboard in section 2.5; declining is possible and the game remains playable).</p>
 <h2>4. Who data is shared with</h2>
-<p>Data described in section 2 is processed by <strong>Google LLC</strong> through Firebase Analytics and Google AdMob, as data processor. Google&#x27;s privacy policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+<p>Data described in section 2 is processed by <strong>Google LLC</strong> through Firebase Analytics, Google AdMob and <strong>Google Play Games</strong>. Google&#x27;s privacy policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+<p>One difference is worth stating plainly: with Firebase and AdMob, Google acts as data processor on our behalf. <strong>With Play Games, your score and nickname live in a Google service</strong> and — if your visibility is set to &quot;Everyone&quot; — may be seen by other players on the public leaderboard.</p>
 <p>No data is sold. Outside of Google, no data is shared with other companies.</p>
 <h2>5. Retention</h2>
 <p>Usage data is retained by Google according to the Firebase Analytics project settings, with a maximum of 14 months for event data. Aggregated, anonymous data that cannot identify a device may be kept indefinitely.</p>
 <h2>6. Your rights</h2>
 <p>You may, at any time and without depending on us, <strong>reset or delete your Advertising ID</strong> (Android Settings → Google → Ads), and <strong>erase all local data</strong> by uninstalling the app or clearing its storage.</p>
+<p>You may also <strong>delete your score and Play Games data</strong> from your Play Games profile (https://play.google.com/games/profile) or your Google Account (https://myaccount.google.com), and <strong>choose who sees your score</strong> through the Play Games profile visibility setting (&quot;Only you&quot;, &quot;Friends&quot; or &quot;Everyone&quot;).</p>
 <p>Under <strong>GDPR</strong> and the Brazilian <strong>LGPD</strong>, you have the right to access, correct, delete and port your data, and to object to processing. To exercise any of these, write to the contact e-mail in section 1. We respond within 15 days.</p>
 <h2>7. Children</h2>
 <p>This app <strong>is not directed to children</strong> under 13 and does not knowingly collect data from children. If you believe a child has provided data, contact us and it will be deleted.</p>
